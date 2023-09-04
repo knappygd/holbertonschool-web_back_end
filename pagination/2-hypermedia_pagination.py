@@ -36,6 +36,7 @@ class Server:
         return self.__dataset[p[0]:p[1]]
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
+        """Returns a dictionary."""
         total_pages = math.ceil(len(self.dataset()) / page_size)
         return {
             "page_size": page_size,
