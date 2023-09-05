@@ -40,9 +40,15 @@ class Server:
         return self.__indexed_dataset
 
     def get_hyper_index(self, index: int = None, page_size: int = 10) -> Dict:
-            return {
-                "index": index,
-                "next_index": pass,
-                "page_size": len(page),
-                "data": page
-            }
+        self.indexed_dataset()
+        data = []
+        next_index = index + page_size
+        for ds in self.__indexed_dataset:
+            if ds >= index and ds <= next_index:
+                data.append(self.__indexed_dataset[ds])
+        return {
+            'index': index,
+            'data': data,
+            'page_size': page_size,
+            'next_index': next_index
+        }
