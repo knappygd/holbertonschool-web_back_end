@@ -8,11 +8,9 @@ export default class HolbertonClass {
     if (hint === 'number') {
       return this._size;
     }
-    else if (hint === 'string') {
+    if (hint === 'string') {
       return this._location;
     }
-    else {
-      return null;
-    }
+    return null;
   }
 }
