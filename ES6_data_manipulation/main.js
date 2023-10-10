@@ -1,4 +1,3 @@
-import cleanSet from "./8-clean_set.js";
+import groceriesList from "./9-groceries_list.js";
 
-const set = new Set(['id-test', 'id-chicken', 'id-user', , 'id-id-']);
-console.log(cleanSet(set, 'id-'));
+console.log(groceriesList());
